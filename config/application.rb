@@ -8,6 +8,21 @@ Bundler.require(*Rails.groups)
 
 module Church
   class Application < Rails::Application
+
+    config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
+    config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
+
+    config.generators do |g|
+      g.test_framework :rspec
+      # don't generate RSpec tests for views and helpers
+      g.view_specs false
+      g.helper_specs false
+
+      # do not generate assets nor helpers
+      g.assets false
+      g.helper false
+    end
+
     config.middleware.use Rack::Cors do
       allow do
         origins '*'

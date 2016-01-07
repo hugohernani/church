@@ -1,0 +1,6 @@
+<h2>Blog Posts</h2>
+<ul class="posts">
+  <% @posts.order_by_content_class.each do |post| %>
+    <li><%= render "#{post.type.tableize}/#{post.type.underscore}", post: post %></li>
+  <% end %>
+</ul>

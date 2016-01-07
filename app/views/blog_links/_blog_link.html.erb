@@ -1,0 +1,5 @@
+<h2><%= link_to post.title, posts_path(post.slug) %></h2>
+<blockquote>
+  <%= simple_format post.quote %>
+</blockquote>
+<p class="comment"><%= post.comment %></p>
