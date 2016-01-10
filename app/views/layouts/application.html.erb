@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 7]>					<html class="ie7 no-js" lang="en">     <![endif]-->
+<!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
+<!--[if IE 9]>					<html class="ie9 no-js" lang="en">     <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->
 <head>
-  <title>Church</title>
+  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Over+the+Rainbow|Open+Sans:300,400,400italic,600,700|Arimo|Oswald|Lato|Ubuntu' %>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title><%= content_for?(:page_header) ? "ADMM - Arapiraca - #{yield(:page_header)}" : 'Assembleia de Deus Madureira - Arapiraca' %></title>
+  <meta name="description" content="">
+	<meta name="author" content="">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <!-- REVOLUTION BANNER CSS SETTINGS -->
+  <link rel="stylesheet" media="screen" href="/rs-plugin/css/settings.css" />
+
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="color-1 h-style-1 text-1">
+  <%= render 'layouts/header' %>
 
-<ul>
-  <% EntryConf.configuration.content_classes.each do |class_name| %>
-    <li>
-      <%= link_to class_name.tableize.titleize, entries_path(content_class: class_name.tableize) %>
-    </li>
-  <% end %>
-</ul>
+  <%= render 'layouts/page_header' if content_for?(:page_header) %>
 
-<%= yield %>
+  <%= homepage?? render('layouts/homepage') : render('layouts/other_page') %>
 
+  <%= render 'layouts/footer' %>
+
+  <script src="/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+  <script src="/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 </body>
 </html>

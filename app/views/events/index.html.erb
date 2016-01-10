@@ -1,0 +1,90 @@
+<%= content_for(:page_header) do %>
+  Eventos
+<% end %>
+
+<section id="content" class="ten columns">
+
+  <%= render @events %>
+
+</section><!--/ #content-->
+
+<!-- - - - - - - - - - - - - end Content - - - - - - - - - - - - - - - -->
+
+<!-- - - - - - - - - - - - - Sidebar - - - - - - - - - - - - - - - - - -->
+
+<aside id="sidebar" class="one-third column">
+
+	<div class="widget widget_search">
+
+		<form action="/" method="post" id="searchform">
+
+			<fieldset>
+
+				<input type="text" />
+
+				<button type="submit" title="Search">Search</button>
+
+			</fieldset>
+
+		</form><!--/ #searchform-->
+
+	</div><!--/ .widget-->
+
+	<div class="widget widget_popular_posts">
+
+		<h3 class="widget-title">Popular Posts</h3>
+
+		<ul>
+			<li>
+				<div class="bordered alignleft">
+					<figure class="add-border">
+						<a class="single-image" href="#"><img src="images/temp/recent-img-1.jpg" alt="" /></a>
+					</figure>
+				</div><!--/ .bordered-->
+				<h6><a href="#">Donec rutrum lobortis nulla</a></h6>
+				<div class="entry-meta">Sep, 15, <a href="#">2 Comments</a></div>
+			</li>
+			<li>
+				<div class="bordered alignleft">
+					<figure class="add-border">
+						<a class="single-image" href="#"><img src="images/temp/recent-img-2.jpg" alt="" /></a>
+					</figure>
+				</div><!--/ .bordered-->
+				<h6><a href="#">Consequuntur magni dolores eos qui ratione</a></h6>
+				<div class="entry-meta">Sep, 15, <a href="#">2 Comments</a></div>
+			</li>
+			<li>
+				<div class="bordered alignleft">
+					<figure class="add-border">
+						<a class="single-image" href="#"><img src="images/temp/recent-img-3.jpg" alt="" /></a>
+					</figure>
+				</div><!--/ .bordered-->
+				<h6><a href="#">Nulla vitae elit libero, a pharetra augue</a></h6>
+				<div class="entry-meta">Sep, 15, <a href="#">2 Comments</a></div>
+			</li>
+		</ul>
+
+	</div><!--/ .widget-->
+
+	<div class="widget widget_categories">
+
+		<h3 class="widget-title">Categories</h3>
+
+		<ul>
+			<li><a href="#">Announcements</a></li>
+			<li><a href="#">Community</a></li>
+			<li><a href="#">Ministries</a></li>
+			<li><a href="#">Missions</a></li>
+		</ul>
+
+	</div><!--/ .widget-->
+
+	<div class="widget widget_latest_tweets">
+
+		<h3 class="widget-title">Latest Tweets</h3>
+
+		<div id="tweet"></div>
+
+	</div><!--/ .widget-->
+
+</aside><!--/ #sidebar-->

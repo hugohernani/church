@@ -1,0 +1,26 @@
+<article class="entry">
+
+  <div class="entry-meta">
+
+    <span class="date"><%= post.created_at.day %></span>
+    <span class="month"><%= post.created_at.strftime('%b') %></span>
+
+  </div><!--/ .entry-meta-->
+
+  <div class="entry-body">
+
+    <div class="entry-title">
+
+      <h2 class="title"><a href="blog-single.html"><%= post.title %></a></h2>
+
+      <span class="author">Criado por <a href="#"><%= post.user %></a></span>,
+
+    </div><!--/ .entry-title-->
+
+    <audio controls="control" src="media/AirReview-Landmarks-02-ChasingCorporate.mp3" type="audio/mp3"></audio>
+
+    <%= link_to 'Saiba mais', blog_path(post), class: 'button defalt small' %>
+
+  </div><!--/ .entry-body -->
+
+</article><!--/ .entry-->

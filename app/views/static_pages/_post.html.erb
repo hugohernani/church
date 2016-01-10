@@ -1,0 +1,17 @@
+<li>
+  <h6><%= link_to post.title %></h6>
+
+  <div class="bordered alignleft">
+
+    <figure class="add-border">
+      <a class="single-image" href="#">
+        <%= image_tag(image_url('temp/latest-img-1.jpg')) %>
+      </a>
+    </figure>
+
+  </div><!--/ .bordered-->
+
+  <p>
+    <%= post.description %>
+  </p>
+</li>

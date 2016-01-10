@@ -1,0 +1,30 @@
+<article class="entry event">
+
+  <div class="entry-meta">
+
+    <span class="date"><%= biblic_school_post.lecture_date.day %></span>
+    <span class="month"><%= biblic_school_post.lecture_date.strftime('%b') %></span>
+
+  </div><!--/ .entry-meta-->
+
+  <div class="entry-body">
+
+    <div class="entry-title">
+
+      <h2 class="title">
+        <%= link_to biblic_school_post.title,
+          biblic_school_path(biblic_school_post) %>
+      </h2>
+
+    </div><!--/ .entry-title-->
+
+    <p>
+      <%= biblic_school_post.topic %>
+    </p>
+
+    <%= link_to "Ver lição", biblic_school_post_path(biblic_school_post),
+      class: 'button default small' %>
+
+  </div><!--/ .entry-body -->
+
+</article><!--/ .entry-->

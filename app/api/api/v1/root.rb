@@ -4,6 +4,10 @@ module API
   module V1
     class Root < Grape::API
       mount Lessons
+      mount Events
+      mount States
+      mount FederalStates
+      mount SovereignStates
 
       add_swagger_documentation(
         format: :json,

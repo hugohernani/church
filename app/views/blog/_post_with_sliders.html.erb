@@ -1,0 +1,47 @@
+<article class="entry">
+
+  <div class="image-post-slider">
+
+    <ul>
+      <% post.images do |image| %>
+        <% if image.file_id %>
+          <li>
+            <div class="bordered">
+              <figure class="add-border">
+                <%= link_to attachment_image_tag(post.image),
+                  blog_path(post), class: 'single-image',rel: 'single-image' %>
+              </figure>
+            </div><!--/ .bordered-->
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+
+  </div><!--/ .image-post-slider-->
+
+  <div class="entry-meta">
+
+    <span class="date"><%= post.created_at.day %></span>
+    <span class="month"><%= post.created_at.strftime('%b') %></span>
+
+  </div><!--/ .entry-meta-->
+
+  <div class="entry-body">
+
+    <div class="entry-title">
+
+      <h2 class="title"><a href="blog-single.html"><%= post.title %></a></h2>
+
+      <span class="author">Criado por <a href="#"><%= post.user %></a></span>,
+
+    </div><!--/ .entry-title-->
+
+    <p>
+      <%= post.description %>
+    </p>
+
+    <%= link_to 'Saiba mais', blog_path(post), class: 'button defalt small' %>
+
+  </div><!--/ .entry-body -->
+
+</article><!--/ .entry-->

@@ -1,0 +1,2 @@
+class SovereignState < State
+end

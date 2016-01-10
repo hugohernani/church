@@ -21,6 +21,12 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'factory_girl_rails'
 gem 'simple_form'
 gem 'devise'
+gem 'fancybox2-rails'
+gem 'enumerate_it'
+
+# Ruby file uploads
+gem "refile", require: "refile/rails"
+gem "refile-mini_magick"
 
 group :development, :test do
   gem 'foreman', '~> 0.78.0'

@@ -1,0 +1,56 @@
+<header id="header">
+
+	<div class="container">
+
+		<!-- - - - - - - - - - - - Logo - - - - - - - - - - - - - -->
+
+		<a href="index.html" id="logo">
+			<h1>Assembleia de Deus - Madureira</h1>
+		</a><!--/ #logo-->
+
+		<!-- - - - - - - - - - - end Logo - - - - - - - - - - - - -->
+
+		<!-- - - - - - - - - - - - Event Holder - - - - - - - - - - - - - -->
+
+		<div class="event-holder clearfix">
+			<b>Próximo evento em:</b>
+			<span class="event-numbers">05</span>
+			<span class="event-text">dias</span>
+			<span class="event-numbers">07</span>
+			<span class="event-text">horas</span>
+			<span class="event-numbers">25</span>
+			<span class="event-text">minutos</span>
+			<span class="event-numbers">35</span>
+			<span class="event-text">segundos</span>
+		</div><!--/ .event-holder-->
+
+		<!-- - - - - - - - - - - end Event Holder - - - - - - - - - - - - -->
+
+		<div class="clear"></div>
+
+		<!-- - - - - - - - - - - - - Navigation - - - - - - - - - - - - - - -->
+
+		<nav id="navigation" class="navigation clearfix">
+			<ul class="clearfix">
+				<li class="current-menu-item"><%= link_to 'Home', root_path %><li>
+				<li><%= link_to 'Membros do site', members_static_pages_path %></li>
+				<li><%= link_to 'Eventos', events_path %></li>
+				<li><%= link_to 'Escola Bíblica', biblic_school_index_path %></li>
+				<li><%= link_to 'Galeria', gallery_index_path %></li>
+				<li><%= link_to 'Blog', blog_index_path %></li>
+				<li><%= link_to 'Contato', contacts_path %></li>
+				<li><a href="#">Mais</a>
+					<ul>
+						<li><a href="#">Quero ser um blogueiro</a></li>
+						<li><%= link_to 'Testemunhos', testimonies_path %></li>
+						<li><%= link_to 'Perguntas e Respostas', faq_index_path %></li>
+					</ul>
+				</li>
+			</ul>
+		</nav><!--/ #navigation-->
+
+		<!-- - - - - - - - - - - - end Navigation - - - - - - - - - - - - - -->
+
+	</div><!--/ .container-->
+
+</header><!--/ #header-->

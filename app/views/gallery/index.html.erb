@@ -1,0 +1,11 @@
+<%= content_for(:page_header) do %>
+  Galeria de images
+<% end %>
+
+<%= render partial: 'layouts/filters', locals: { categories: @categories } %>
+
+<section id="gallery" class="gallery">
+
+  <%= render @images %>
+
+</section>

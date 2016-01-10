@@ -1,0 +1,7 @@
+<ul id="portfolio-filter" class="portfolio-filter">
+
+  <li><a data-categories="*">Todos</a></li>
+  <% categories.each do |category| %>
+    <%= content_tag(:li, content_tag(:a, 'data-categories': "#{category}")) %>
+  <% end %>
+</ul>

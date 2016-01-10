@@ -1,0 +1,10 @@
+<li>
+  <div class="entry-meta">
+    <span class="date"><%= event.start_at.day %></span>
+    <span class="month"><%= event.start_at.strftime('%b') %></span>
+  </div><!--/ .entry-meta-->
+
+  <h6><%= link_to event.title, event_path(event) %></h6>
+  <span class="place"><%= event.address.address %></span>
+  <span class="time"><%= "#{event.start_at.to_s(:time)} - #{event.finish_at.to_s(:time)}" %></span>
+</li>

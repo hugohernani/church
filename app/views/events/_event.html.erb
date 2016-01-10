@@ -1,0 +1,41 @@
+<article class="entry event">
+
+  <%= if event.image.file_id %>
+    <div class="bordered">
+      <figure class="add-border">
+        <%= link_to attachment_image_tag(event.image),
+          event_path(event), class: 'single-image' %>
+      </figure>
+    </div><!--/ .bordered-->
+  <% end %>
+
+
+  <div class="entry-meta">
+
+    <span class="date"><%= event.start_at.day %></span>
+    <span class="month"><%= event.start_at.strftime('%b') %></span>
+
+  </div><!--/ .entry-meta-->
+
+  <div class="entry-body">
+
+    <div class="entry-title">
+
+      <h2 class="title"><%= link_to event.title, event_path(event) %></h2>
+
+      <span class="e-date"><b><%= event.period %></b>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+        <strong><%= event.duration_time %></strong>
+      </span>
+      <span class="place"><b>Endereço: </b>event.address</span>
+
+    </div><!--/ .entry-title-->
+
+    <p>
+      <%= event.description %>
+    </p>
+
+    <%= link_to "Ver mais", event_path(event), class: 'button default small' %>
+
+  </div><!--/ .entry-body -->
+
+</article><!--/ .entry-->

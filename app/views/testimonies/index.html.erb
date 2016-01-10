@@ -1,0 +1,11 @@
+<%= content_for(:page_header) do %>
+  Testemunhos
+<% end %>
+
+<!-- - - - - - - - - - - - - - Content - - - - - - - - - - - - - - - - -->
+
+<section id="content">
+
+  <%= render partial: 'testimonies/testimony', collection: @testimonies %>
+
+</section><!--/ #content-->

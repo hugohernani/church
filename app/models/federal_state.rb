@@ -1,0 +1,2 @@
+class FederalState < State
+end

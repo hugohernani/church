@@ -1,0 +1,18 @@
+<article class="four columns" data-categories="<%= image.categories %>">
+
+  <div class="project-thumb">
+
+    <div class="bordered">
+      <figure class="add-border">
+        <%= link_to attachment_image_tag(event.image),
+          event_path(event), class: 'single-image' %>
+
+        <%= link_to attachment_image_tag(image, :pad, 40, 40),
+          attachment_image_tag(image),
+          class: 'single-image picture-icon', rel: 'gallery' %>
+      </figure>
+    </div><!--/ .bordered-->
+
+  </div><!--/ .project-thumb-->
+
+</article><!--/ .four-->

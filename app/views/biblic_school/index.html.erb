@@ -1,0 +1,33 @@
+<%= content_for(:page_header) do %>
+  Escola Bíblica
+<% end %>
+
+<section id="content" class="ten columns">
+
+  <%= render @biblic_school_posts %>
+
+</section><!--/ #content-->
+
+<!-- - - - - - - - - - - - - end Content - - - - - - - - - - - - - - - -->
+
+<!-- - - - - - - - - - - - - Sidebar - - - - - - - - - - - - - - - - - -->
+
+<aside id="sidebar" class="one-third column">
+
+	<div class="widget widget_search">
+
+		<form action="/" method="post" id="searchform">
+
+			<fieldset>
+
+				<input type="text" />
+
+				<button type="submit" title="Search">Search</button>
+
+			</fieldset>
+
+		</form><!--/ #searchform-->
+
+	</div><!--/ .widget-->
+
+</aside><!--/ #sidebar-->

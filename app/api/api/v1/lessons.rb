@@ -4,12 +4,12 @@ module API
       include Defaults
 
       group :lessons do
-        desc 'Return all lessons'
+        desc 'Returns all lessons'
         get '', root: :lessons do
           Lesson.all
         end
 
-        desc 'Retorn one lesson'
+        desc 'Returns one lesson'
         params do
           requires :id, type: String, desc: "Lesson id"
         end

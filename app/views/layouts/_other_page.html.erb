@@ -1,0 +1,12 @@
+<!-- - - - - - - - - - - - - - Main - - - - - - - - - - - - - - - - -->
+
+<section class="main container sbr clearfix">
+
+  <%= render partial: 'layouts/breadcrumbs',
+    locals: {current_navigation_path: yield(:page_header)} %>
+
+  <%= yield %>
+
+</section><!--/ .main -->
+
+<!-- - - - - - - - - - - - - end Main - - - - - - - - - - - - - - - - -->

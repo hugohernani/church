@@ -1,0 +1,14 @@
+<div class="quoteBox five columns alpha">
+
+  <%= content_tag :div, class:'quote-text' do %>
+    <%= truncate(testimony.content, 100) %>
+  <% end %>
+
+  <%= content_tag :span, class:'quote-author' do %>
+    <% content_tag :span do %>
+      <%= testimony.author %>
+    <% end %>
+    <%= testimony.profession if testimony.profession? %>
+  <% end %>
+
+</div><!--/ .quoteBox-->
